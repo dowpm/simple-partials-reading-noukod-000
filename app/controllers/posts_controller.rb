@@ -4,7 +4,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    binding.pry
+    # binding.pry
     @post = Post.find(params[:id])
     @author = @post.author
   end
