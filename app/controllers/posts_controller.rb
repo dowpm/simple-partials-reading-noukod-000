@@ -1,13 +1,11 @@
 class PostsController < ApplicationController
   def index
-    Author.create(name: "John Grisham", hometown: "Charlottesville, VA")
-    @author = Author.create(name: "John Grisham", hometown: "Charlottesville, VA")
     @posts = Post.all
   end
 
   def show
     # binding.pry
-  
+
     @post = Post.find(params[:id])
     @author = @post.author
   end
