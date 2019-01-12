@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def show
     # binding.pry
+    Author.create(name: "John Grisham", hometown: "Charlottesville, VA")
     @post = Post.find(params[:id])
     @author = @post.author
   end
